@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity"
+    android:longClickable="false"
+    android:id="@+id/layout">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar"
+        ></include>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Demo Mode"
+        android:id="@+id/titleDemoMode"
+        android:layout_below="@+id/tool_bar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Demo User:"
+        android:id="@+id/lblDemoUser"
+        android:layout_below="@+id/titleDemoMode"
+        android:layout_alignRight="@+id/titleDemoMode"
+        android:layout_alignEnd="@+id/titleDemoMode"
+        android:layout_marginTop="24dp" />
+
+    <Spinner
+        android:id="@+id/spinSelectDemoUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+
+
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_below="@+id/titleDemoMode"
+        android:layout_toRightOf="@+id/lblDemoUser"
+        android:layout_toEndOf="@+id/lblDemoUser"></Spinner>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Heart Rate:"
+        android:id="@+id/lblHeartRate"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/lblDemoUser"
+        android:layout_alignStart="@+id/lblDemoUser" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="144"
+        android:id="@+id/lblHeartRateValue"
+        android:layout_alignBottom="@+id/lblHeartRate"
+        android:layout_alignLeft="@+id/spinSelectDemoUser"
+        android:layout_alignStart="@+id/spinSelectDemoUser" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Arousal Level:"
+        android:id="@+id/lblArousalLevel"
+        android:layout_below="@+id/lblHeartRate"
+        android:layout_alignLeft="@+id/lblHeartRate"
+        android:layout_alignStart="@+id/lblHeartRate" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="1"
+        android:id="@+id/lblArousalValue"
+        android:layout_alignBottom="@+id/lblArousalLevel"
+        android:layout_alignLeft="@+id/lblHeartRateValue"
+        android:layout_alignStart="@+id/lblHeartRateValue" />
+
+
+</RelativeLayout>
