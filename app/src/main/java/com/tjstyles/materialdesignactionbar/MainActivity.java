@@ -29,6 +29,9 @@ public class MainActivity extends ActionBarActivity {
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
 
+        //Creates an instance of spinner called "spinSelectDemoUser"
+        //Creates a string array called "items" and adds two values: "Andy" and "James"
+        //Creates an array adapter called "adapter"
         Spinner dropdown = (Spinner)findViewById(R.id.spinSelectDemoUser);
         String[] items = new String[]{"Andy", "James"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, items);
